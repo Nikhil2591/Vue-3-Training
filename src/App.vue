@@ -13,16 +13,13 @@
     </div>
     <button @click.alt="toggleModal">open modal (alt)</button>
     <div v-if="showModalTwo">
-      <Modal theme="" @close="toggleModalTwo">
-        <template v-slot:links>
-          <a href="#">sign up now</a>
-          <a href="#">more info</a>
-        </template>
-        <h1>Ninja Giveaway</h1>
-        <p>Grab your ninja swag for half price</p>
+      <Modal @close="toggleModalTwo">
+          <h1>Sign up for the newsletter</h1>
+          <p>For updates and promo codes</p>
       </Modal>
     </div>
-    <button @click.alt="toggleModalTwo">open modal two (alt)</button>
+
+    <button @click="toggleModalTwo">open modal</button>
 </template>
 
 <script>
